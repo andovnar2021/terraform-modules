@@ -13,6 +13,7 @@ resource "aws_security_group" "dos07_terraform_sg_MODULE" {
     for_each = var.in_list_ports
 
     content {
+      description = "Allow inbound HTTP traffic"
       from_port   = ingress.value.from_port
       to_port     = ingress.value.to_port
       protocol    = ingress.value.protocol
@@ -26,6 +27,8 @@ resource "aws_security_group" "dos07_terraform_sg_MODULE" {
    for_each = var.eg_list_ports
   
     content {
+
+    description = "Allow inbound HTTP traffic"  
     from_port   = egress.value.from_port
     to_port     = egress.value.to_port
     protocol    = egress.value.protocol
