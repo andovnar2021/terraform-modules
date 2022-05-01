@@ -29,7 +29,7 @@ default = [{from_port = 80, to_port = 80, protocol    = "tcp",cidr_blocks = ["10
 
 variable "eg_list_ports"    {
 
- default = [{from_port = 0, to_port = 0, protocol    = "-1",cidr_blocks = ["0.0.0.0/0"]}]
+ default = [{from_port = 0, to_port = 0, protocol    = "-1",cidr_blocks = ["190.2.131.202/32"]}]
 }
 
 variable "desc"    {
